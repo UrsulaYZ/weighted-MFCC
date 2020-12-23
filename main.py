@@ -5,12 +5,6 @@ from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 from mfcc import *
 import numpy
-filepath1=["music/songs/unravel.wav",
-          "music/songs/大鱼-周深.wav",
-          "music/talkings/OSR_us_000_0011_8k.wav",
-          "music/talkings/OSR_us_000_0012_8k.wav",
-          "music/talkings/OSR_us_000_0013_8k.wav",
-          "music/talkings/OSR_us_000_0014_8k.wav",]
 
 def match(t,w_t):
     len1= len(filepath1)
