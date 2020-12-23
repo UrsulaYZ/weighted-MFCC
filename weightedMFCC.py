@@ -12,7 +12,7 @@ def MFCC(filepath,begin):
 
     #print(sample_rate, len(signal))
     # 读取前3s 的数据
-    signal = signal[begin:int((begin+3) * sample_rate)]
+    signal = signal[begin*sample_rate:int((begin+3) * sample_rate)]
     #print(signal)
 
     # 预先处理
@@ -151,13 +151,12 @@ def MFCC_R(mfcc1,mfcc2):
     res=value1/y
     return res
 
+def O_dis(mfcc1,mfcc2):
+    op = numpy.linalg.norm(mfcc1 - mfcc2)
+    return op
+
 def wei_MFCC(mfcc):
     STA=MFCC_sta(mfcc)
     w=weight(STA)
     res=numpy.multiply(mfcc,w)
     return res
-
-
-
-
-
